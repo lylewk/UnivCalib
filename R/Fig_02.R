@@ -70,5 +70,5 @@ Fig_02<-function ()
   lines(2170:2760,10000*dt_scaled(2170:2760,N-2,est,post.scale))
   axis(4,pos=3000,at=c(0,20,40,60),labels=c(0,20,40,60)/10000)
   mtext('Density',side=4,line=2,at=30)
-  lines(rep(2388,2),c(0,20),lty=3,lwd=3)
+  shape::Arrows(2388,10,2388,0,arr.adj=1,arr.type='simple',lwd=2)
 }

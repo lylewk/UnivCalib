@@ -1,5 +1,5 @@
 #' @export
-Fig_01<-function (sum_biv='biv_stats')
+Fig_01<-function ()
 {
   lab=expression(Left ~~ 3^rd ~~ MC ~~ mm.)
 
@@ -48,12 +48,12 @@ Fig_01<-function (sum_biv='biv_stats')
   names(Est)=c('Inverse','RMA','Classical')
   cat('Estimated statures when MC3 length = 90.7 mm\n')
   print(Est)
-  lines(c(2600,min(Est)),rep(Cotter,2))
+  lines(c(Est[1],Est[3]),rep(Cotter,2))
 
   shape::Arrows(2388,55.27348+5,2388,55.27348,arr.adj=1,arr.type='simple',lwd=2)
 
   legend(x='topleft',bty='n',legend=c('x on y','RMA',
-                                      'y on x','Actual stature'),lty=c(1:3,NA),lwd=c(rep(2,3),NA))
+                                      'y on x','Actual stature'),lty=c(c(2,3,1),NA),lwd=c(rep(2,3),NA))
   par(font = 5) #change font to get arrows
   legend("topleft", legend = c(NA, NA, NA, NA), pch = c(NA,NA,NA, 175),
          bty = "n")

@@ -1,5 +1,0 @@
-#' @export
-qt_scaled<-function (p=.95, df, mean = 0, sd = 1)
-{
-  mean + sd * qt((1+p)/2, df, lower.tail = TRUE)
-}

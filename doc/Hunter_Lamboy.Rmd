@@ -1,0 +1,61 @@
+---
+title: "Hunter & Lamboy"
+author: "Lyle W. Konigsberg"
+date: "`r Sys.Date()`"
+bibliography: bibliography.bibtex
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Hunter & Lamboy}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r eval=T}
+library(UnivCalib)
+```
+
+This is an example from @RN8620.
+
+```{r}
+data(HL_Table_1) # get the Hunter & Lamboy Table 1 data
+biv_stats = make_biv('HL_Table_1') 
+```
+
+Blah-Blah
+
+```{r}
+y=6
+HuntLamb(area=0.9) 
+#  4.824 5.307 5.790 From H&L
+
+HuntLamb(area=0.95) 
+#  4.722 5.307 5.893 From H&L
+
+HuntLamb(area=0.99) 
+#  4.506 5.307 6.109 From H&L
+```
+
+Exact
+
+```{r}
+y=6
+exact(area=0.9) 
+#  4.824 5.307 5.790 From H&L
+
+exact(area=0.95) 
+#  4.721 5.307 5.893 From H&L
+
+exact(area=0.99) 
+#  4.504 5.307 6.111 From H&L
+```
+
+#### References
+
+

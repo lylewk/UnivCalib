@@ -1,10 +1,7 @@
 ---
 title: "Hunter & Lamboy"
 bibliography: bibliography.bibtex
-output:
-  html_document: null
-  word_document: null
-  pdf_document: null
+output: rmarkdown::html_vignette
 vignette: "%\\VignetteIndexEntry{Hunter & Lamboy} %\\VignetteEngine{knitr::rmarkdown}
   %\\VignetteEncoding{UTF-8}\n"
 ---
